@@ -1,0 +1,8 @@
+.listItem{
+    text-decoration: none;
+    color:#777777;
+}
+.listItem:hover{
+    text-decoration:underline;
+    color:#777777;
+}

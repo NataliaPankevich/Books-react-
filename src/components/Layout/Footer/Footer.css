@@ -1,0 +1,155 @@
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.footer-top-wrapper {
+    background-color: #EBEBEB;
+    padding:20px 0px;
+}
+.footer-bottom-wrapper {
+    background-color: #2F2F2F; 
+    padding:20px 0px;   
+}
+
+.footer-bottom {
+    display:flex;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-top {
+    display:flex;
+    justify-content: space-between;
+    color:#777777;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-top-child {
+    max-width:24%;
+    margin:0px 1%;
+    text-align: left;
+}
+.footer-top-child p {
+    margin:0px;
+    padding:0px;
+}
+
+
+
+.footer-top-contact {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-top-contact-img {
+    background-color:#23B4CA;
+    width:40px;
+    height:40px;
+}
+
+.footer-top-contact-text {
+    border-bottom: 1px solid  #23B4CA;
+    font-size: 25px;
+    padding: 0px 15px;
+    width:220px;
+}
+
+
+
+
+.footer-top-account {
+    display: flex;
+    justify-content: flex-start;
+}
+.footer-top-account-img {
+    background-color:#40AF64;
+    width:40px;
+    height:40px;
+}
+.footer-top-account-text {
+    border-bottom: 1px solid  #40AF64;
+    font-size: 25px;
+    padding: 0px 15px;
+    width:220px;    
+}
+
+
+
+.footer-top-information {
+    display: flex;
+    justify-content: flex-start;
+}
+.footer-top-information-img {
+    background-color:#F7BE24;
+    width:40px;
+    height:40px;
+}
+.footer-top-information-text {
+    border-bottom: 1px solid  #F7BE24;
+    font-size: 25px;
+    padding: 0px 15px;
+    width:220px;
+}
+
+
+
+.footer-top-buy {
+    display: flex;
+    justify-content: flex-start;
+}
+.footer-top-buy-img {
+    background-color:#DE5648;
+    width:40px;
+    height:40px;
+}
+.footer-top-buy-text {
+    border-bottom: 1px solid  #DE5648;
+    font-size: 25px;
+    padding: 0px 15px;
+    width:220px;
+}
+
+
+.footer-top-payment {
+    width: 280px;
+    height:55px;
+    position:absolute;
+    right:200px;
+    bottom:0px;
+}
+
+.footer-bottom-info {
+    width:25%; 
+    color:#E1EEEE;
+    text-align: left;   
+}
+
+.footer-bottom-input {
+    width:50%;
+    font-size: 20px;
+    color:#E1EEEE;
+    
+}
+.footer-bottom-input input{
+    width:50%;
+    height:30px;
+    margin-bottom: 30px;
+}
+
+
+
+.footer-bottom-socials{
+    display: flex;
+}
+.footer-bottom-socials-icon {    
+    margin:0px 5px;
+    
+}
+.footer-bottom-socials-icon img{
+    width:50px;
+    height:50px;  
+    background-color: #FFF; 
+    border-radius: 5px; 
+}
