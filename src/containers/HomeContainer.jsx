@@ -1,12 +1,102 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import './HomeContainer.css';
+import { Link } from "react-router-dom";
+import{useState, useEffect, useRef} from 'react';
+import {BookItem} from  "../components/bookItem/BookItem";
+import {Slider} from '../components/slider/Slider';
+import { Button } from "../components/buttons/Button";
 
 //Это менеджер(умная) компонента. Она получает данные и передает внутрь всем компонентам в виде пропсов.
-export const HomeContainer=()=>{
-    return (
-        <div>
-        <h2>Hello!!</h2>       
-        <Link to="/page/:id">BookPage</Link> 
-    </div> 
+export const HomeContainer = () => {
+
+  const [booksList, setBooksList] = useState([]);
+  const refContainer= useRef(null);
+
+  
+  const showText=()=>{
+    if (refContainer.current.className === "home-page-text-close"){
+      refContainer.current.className = "home-page-text-open";   
+      }else if(refContainer.current.className === "home-page-text-open"){
+        refContainer.current.className = "home-page-text-close"; 
+      }
+  }
+  
+
+  useEffect (
+  ()=>{
+    const url = 'https://api.itbook.store/1.0/new';
+    fetch(url)
+    .then(response => response.json())
+    .then(
+      (text) => {           
+        setBooksList([...text.books])                
+      }
     )
-}
+  },[] 
+  )
+
+  return (
+    <div className="home-page-wrapper container">
+
+        <div className="home-page-slider">         
+        <Slider/>
+        </div>
+
+      
+        <div ref={refContainer} className="home-page-text-close">
+          Вы наконец заглянули к нам в поисках доброй пары-тройки книг? Мы
+          бесконечно рады, ведь именно затем, дорогой читатель, книжный
+          интернет-магазин biblio.by и собрал огромную библиотеку. Но обо всем
+          по порядку. Во-первых, у нас для вас много книг. Действительно много –
+          десятки тысяч. Для людей самых разных возрастов, с самыми разными
+          профессиями и интересами. В ассортименте – художественная, справочная,
+          научная, техническая и учебная литература. Хотите купить новинку,
+          которую сложно найти в Минске? Она наверняка есть у нас –
+          воспользуйтесь удобным каталогом и убедитесь! Во-вторых, у нас для вас
+          самые низкие цены. Сравнивайте с аналогичными предложениями,
+          удивляйтесь и без того приятным цифрам и получайте дополнительные
+          скидки. Купить книги через Интернет сегодня не проблема, но редкий
+          сервис ориентирован на клиентов настолько, насколько ориентирован
+          biblio.by. Мы знаем, что для вас это важно. Мы будем рады, если вы это
+          оцените. В-третьих, у нас для вас приятные акции. Наше дело не просто
+          продажа книг в Беларуси: Библио.бай собирает вокруг себя друзей,
+          помогает им с поиском подходящих изданий, предлагает последние на
+          выгодных условиях и приятно удивляет сюрпризами! Так, покупая книги
+          себе, вы можете получить подарок для своего ребенка и дополнительные
+          скидки. Предугадать, как мы порадуем вас в следующий раз невозможно,
+          но в том, что порадуем, сомнений нет. В-четвертых, у нас для вас
+          удобный поиск. Книги по Интернету в принципе хороши: здесь нет жутких
+          очередей, которые лишают возможности рассмотреть то, что интересно. Но
+          наш Интернет-магазин книг на этом не остановился: мы предлагаем
+          каталог с простыми и понятными категориями, грамотными фильтрами и
+          удобными типами сортировки – по наличию, цене, популярности, году
+          издания и названию. Так что искать на Библио Бай действительно просто!
+          В-пятых, у нас для вас доставка на дом. Biblio.by не понаслышке знает,
+          как приятно выбрать книгу и получить её в руки, буквально не покидая
+          домашнего уюта с пледом и чашкой любимого кофе. Поэтому мы с радостью
+          привозим заказанные книги прямо к вам домой или (если вам так удобнее)
+          высылаем их почтой. Наша цель – угодить вам предложением и сделать это
+          так, чтобы впредь у вас не возникало сомнений, где искать книги через
+          Интернет. Biblio.by работает так, как удобно вам. 
+          <div><b>Не знаете, где  купить книгу? - обращайтесь к нам!</b></div>
+        </div>
+
+        <Button  style="home-page-text-btn" onClick={showText} text="Читать далее..."/>      
+     
+      <div className="home-page-books-wrapper">
+        <div className="home-page-books-title">
+          <div>
+            <img src="./img/home-page-pictures/bg_featured.png" alt="" />
+          </div>
+          <div><p>Книжные новинки</p></div>
+        </div>
+        
+        <div className="home-page-books">
+          {booksList.map((item)=><BookItem info={item}/>)}
+        </div>
+
+      </div>  
+  
+    </div>
+  );
+};

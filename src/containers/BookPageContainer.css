@@ -1,0 +1,41 @@
+.book-page-wrapper {
+    padding: 15px 0px;
+}
+
+
+.book-page-pagination {
+    height:25px;
+    background-color: #EBEBEB;
+}
+
+.book-description {
+    display:flex;
+    margin:20px 0px;
+}
+
+.book-description-img {
+    background-color: #EBEBEB;
+    padding:20px;
+}
+
+.book-description-info {
+    margin:10px 0px 10px 30px;
+    text-align:left;
+}
+
+.book-description-info p{
+    margin:0px;    
+    font-size: 14px;
+    line-height:20px;
+}
+
+.book-description-text{
+    text-align: justify;
+}
+
+.book-price p{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+

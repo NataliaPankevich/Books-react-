@@ -4,15 +4,19 @@ import './Button.css';
 export const Button =(props)=>{
     let styles = '';
 
-    if(props.style === "outline"){
-        styles="outline";
-    }else if(props.style === ""){
-        styles="outline";
+    if(props.style === "search-button"){
+        styles="search-button";
+    }else if(props.style === "subscribe-button"){
+        styles="subscribe-button";
+    }else if(props.style === "in-basket-button"){
+        styles="in-basket-button"; 
+    }else if(props.style === "home-page-text-btn"){
+        styles="home-page-text-btn"; 
     }
 
     return (
         <div>
-           <button className={styles}>{props.text}</button> 
+           <button onClick={props.onClick} className={styles}>{props.text}</button> 
         </div>        
     )
 }

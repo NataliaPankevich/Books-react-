@@ -1,31 +1,39 @@
 import React from 'react';
-import "./Header.css";
-import { Routes, Route, Link } from "react-router-dom";
-import { MenuItem } from "./MenuItem";
-import { Button } from "../../buttons/Button";
+import './Header.css';
+import { Link } from 'react-router-dom';
+import { MenuItem } from './MenuItem';
+import { Button } from '../../buttons/Button';
+import { Authorization } from './authorization/Authorization';
+import {useState} from 'react';
+
+
 
 export const Header = () => {
+
+    const[hidden, setHidden]=useState(true);   
+
   return (
     <div>
       <div className="header-top-wrapper">
         <div className="header-top container">
-          <div>
-            <span> <img  src="./img/header-pictures/skype-icon.png" alt=""/>A1:+375 29 615 65 88</span>
+          <div className="header-top-info">
+            <span> A1:+375 29 615 65 88</span>
             <span>МТС: +375 29 851 65 88 </span>
             <span> Life: +375 25 692 65 88</span>
           </div>
 
-          <div >
-            <Link to=""><img  src="./img/header-pictures/login.png" alt=""/></Link>
-            <Link to=""><img  src="./img/header-pictures/topcart_icon.png" alt=""/></Link>
-            <Link to=""><img  src="./img/header-pictures/checkout.png" alt=""/></Link>            
+          <div className="header-top-buttons">
+            <div className="header-top-authorization-btn"><Link  onClick={()=>setHidden(!hidden)} to=""><img  src="./img/header-pictures/login.png" alt=""/></Link></div>
+            {hidden ?  null : <Authorization/>}
+            <div className="header-top-basket-btn"><Link to=""><img  src="./img/header-pictures/topcart_icon.png" alt=""/></Link></div>
+            <div className="header-top-order-btn"><Link to=""><img  src="./img/header-pictures/checkout.png" alt=""/></Link></div>            
           </div>
         </div>
       </div>
 
       <div className="header-grid-container container">
         <div className="header-logo">
-          <img className="header-logo-img" src="./img/logo/logo.png" alt=""/>
+          <Link to="/"><img className="header-logo-img" src="./img/logo/logo.png" alt=""/></Link>
         </div>
 
         <div className="header-search-input">
@@ -33,7 +41,7 @@ export const Header = () => {
         </div>
 
         <div className="header-search-button">
-        <Button style="outline" text={<img  className="search-button-img" src="./img/header-pictures/search_icon.png" alt=""/>} />
+          <Button style="search-button" text={<img  className="search-button-img" src="./img/header-pictures/search_icon.png" alt=""/>} />
         </div>
 
         <div className="header-menu-item1">
@@ -65,7 +73,7 @@ export const Header = () => {
         </div>
 
         <div className="header-menu-like"><img src="./img/header-pictures/hearts.webp" alt=""/></div>
-        <div className="header-menu-question"><button >?</button></div>
+        <div className="header-menu-question"><img src="./img/header-pictures/question.png" alt=""/></div>
       </div>
     </div>
   );

@@ -1,3 +1,31 @@
-.outline {
-    background-color:#777777;
+.search-button{
+    background-color:#23B4CA;
+    border:2px solid #2B2B2B;
+    border-radius: 2px;
+}
+
+.subscribe-button{
+    background-color:#777777;   
+    border-radius: 3px;
+    padding:10px 5px;
+    color:#EBEBEB;
+    font-size: 18px;
+}
+
+.in-basket-button{  
+    border-radius: 2px;
+    border:2px solid #23B4CA;
+    color:#23B4CA;
+    font-size:18px;
+    padding:12px 10px;
+    margin:10px 0px;
+}
+
+.home-page-text-btn {    
+    color:#23B4CA; 
+    border:0px;
+    font-size: 18px;   
+    font-weight: bold;
+    background-color: #fff;
+    margin:15px;
 }

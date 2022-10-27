@@ -24,13 +24,15 @@
     color:#777777;
     font-size: 14px;
     line-height: 20px;
+    position:relative;
 }
 
 .footer-top-child {
     max-width:24%;
     margin:0px 1%;
-    text-align: left;
+    text-align: left;   
 }
+
 .footer-top-child p {
     margin:0px;
     padding:0px;
@@ -93,8 +95,6 @@
     width:220px;
 }
 
-
-
 .footer-top-buy {
     display: flex;
     justify-content: flex-start;
@@ -116,40 +116,35 @@
     width: 280px;
     height:55px;
     position:absolute;
-    right:200px;
-    bottom:0px;
+    right:100px;
+    bottom:50px;
 }
 
 .footer-bottom-info {
     width:25%; 
     color:#E1EEEE;
-    text-align: left;   
+    text-align: left;  
 }
 
 .footer-bottom-input {
     width:50%;
     font-size: 20px;
-    color:#E1EEEE;
-    
+    color:#E1EEEE;    
 }
 .footer-bottom-input input{
     width:50%;
     height:30px;
     margin-bottom: 30px;
 }
-
-
-
 .footer-bottom-socials{
     display: flex;
 }
 .footer-bottom-socials-icon {    
-    margin:0px 5px;
+    margin:0px 10px;
+    color:#E1EEEE;    
+}
+.footer-bottom-socials-icon a {    
     
+    color:#E1EEEE;    
 }
-.footer-bottom-socials-icon img{
-    width:50px;
-    height:50px;  
-    background-color: #FFF; 
-    border-radius: 5px; 
-}
+

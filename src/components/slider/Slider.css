@@ -1,0 +1,25 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height:470px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  overflow: hidden;  
+}
+
+.slider-img  img{   
+  position: absolute;
+  width: 100%;
+  top:0px;
+  left:0px;
+  transition: all 0.2s;  
+}
+
+.slider-img-prev {
+  transform: translateX(-100%);  
+}
+
+.slider-img-next {
+  transform: translateX(100%); 
+}
