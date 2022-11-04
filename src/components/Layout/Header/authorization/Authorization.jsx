@@ -1,6 +1,7 @@
 import './Authorization.css';
 import {useState} from 'react';
 import validator from 'validator';
+import { Input } from '../../../input/Input';
 
 export const Authorization=(props)=>{
 
@@ -48,37 +49,49 @@ export const Authorization=(props)=>{
             })
         }*/
     }
-    
+
+     
 
     return(
-
-        <div  className="modal">  
-          <span  className="close">&times;</span>
+        <div>
             
-            <h2>Регистрация:</h2>
-            <form  onSubmit={submitCheckin}>
-                <div>
-                   <label>Имя пользователя:
-                    <input  type="username"  id="username" name="username" value={register.username} onChange={changeInputRegister}/></label>
-                      
-                </div>
-               <div>
-                    <label>Email: 
-                    <input type="email"  id="email"  name="email" value={register.email} onChange={changeInputRegister} formnovalidate/></label>
-               </div>
-                <div>
-                    <label>Пароль: 
-                    <input type="password"  id="password"  name="password"  value={register.password}  onChange={changeInputRegister}/></label>
-                </div>   
-                <div>
-                    <label>Повторите пароль: 
-                    <input type="password" id="password2" name="password2" value={register.password2}  onChange={changeInputRegister}/></label>
-                </div>
-                
-                <div><input type="submit" /></div>
-            </form>          
-
+          
+                <div  className="authorization-modal">           
+        
+                    <h3>Регистрация:</h3>
+                        <form  method="post" action="" onSubmit={submitCheckin}>
+                            <div>
+                            <label>Имя пользователя:
+                                <p><input  type="username"  id="username" name="username" value={register.username} onChange={changeInputRegister}/></p></label>
+                                
+                            </div>
+                        <div>
+                                <label>Email: 
+                                <p><input type="email"  id="email"  name="email" value={register.email} onChange={changeInputRegister} formnovalidate/></p></label>
+                        </div>
+                            <div>
+                                <label>Пароль: 
+                                <p><input type="password"  id="password"  name="password"  value={register.password}  onChange={changeInputRegister}/></p></label>
+                            </div>   
+                            <div>
+                                <label>Повторите пароль: 
+                                <p><input type="password" id="password2" name="password2" value={register.password2}  onChange={changeInputRegister}/></p></label>
+                            </div>
+                            
+                            <div><Input type="submit" /></div>
+                        </form>
+                </div>       
         </div>
+            
+            
+
+
+
+
+          
+            
+
+       
 
 
     );

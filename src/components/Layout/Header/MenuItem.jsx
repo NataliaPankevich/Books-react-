@@ -6,7 +6,7 @@ export const MenuItem=(props)=>{
     return(
 
         <div className="menu-item-wrapper">
-            <div><img src={props.src} alt=""/></div>
+            <div className="menu-item-img"><img src={props.src} alt=""/></div>
             <Link className="menu-item-link" to="">{props.name}</Link>
         </div>
 

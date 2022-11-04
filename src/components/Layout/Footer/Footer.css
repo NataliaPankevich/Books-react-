@@ -9,7 +9,7 @@
 }
 .footer-bottom-wrapper {
     background-color: #2F2F2F; 
-    padding:20px 0px;   
+    padding:20px 0px 0px 0px;   
 }
 
 .footer-bottom {
@@ -17,8 +17,7 @@
     font-size: 14px;
     line-height: 20px;
 }
-
-.footer-top {
+.footer-top {   
     display:flex;
     justify-content: space-between;
     color:#777777;
@@ -26,41 +25,45 @@
     line-height: 20px;
     position:relative;
 }
+.footer-top-socials-wrapper {
+    display:none;
+}
+.footer-top-socials {
+    display:flex;
+    justify-content: center;
+    margin:15px 0px;    
+}
+.footer-top-socials-icon {
+    margin: 5px 10px;
+}
+.footer-top-socials-icon a {   
+    color:#2F2F2F;   
+}
 
 .footer-top-child {
     max-width:24%;
     margin:0px 1%;
     text-align: left;   
 }
-
 .footer-top-child p {
     margin:0px;
     padding:0px;
 }
-
-
-
 .footer-top-contact {
     display: flex;
     justify-content: flex-start;
 }
-
 .footer-top-contact-img {
     background-color:#23B4CA;
     width:40px;
     height:40px;
 }
-
 .footer-top-contact-text {
     border-bottom: 1px solid  #23B4CA;
     font-size: 25px;
     padding: 0px 15px;
-    width:220px;
+    width:84.5%;
 }
-
-
-
-
 .footer-top-account {
     display: flex;
     justify-content: flex-start;
@@ -74,11 +77,8 @@
     border-bottom: 1px solid  #40AF64;
     font-size: 25px;
     padding: 0px 15px;
-    width:220px;    
+    width:84.5%;    
 }
-
-
-
 .footer-top-information {
     display: flex;
     justify-content: flex-start;
@@ -92,9 +92,8 @@
     border-bottom: 1px solid  #F7BE24;
     font-size: 25px;
     padding: 0px 15px;
-    width:220px;
+    width:84.5%;
 }
-
 .footer-top-buy {
     display: flex;
     justify-content: flex-start;
@@ -108,43 +107,123 @@
     border-bottom: 1px solid  #DE5648;
     font-size: 25px;
     padding: 0px 15px;
-    width:220px;
+    width:84.5%;
 }
-
-
 .footer-top-payment {
-    width: 280px;
+    width: 30%;
     height:55px;
     position:absolute;
     right:100px;
     bottom:50px;
 }
-
+.footer-bottom p {
+    margin:0px;
+}
 .footer-bottom-info {
     width:25%; 
     color:#E1EEEE;
     text-align: left;  
 }
-
 .footer-bottom-input {
     width:50%;
     font-size: 20px;
-    color:#E1EEEE;    
+    color:#E1EEEE; 
 }
 .footer-bottom-input input{
     width:50%;
     height:30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .footer-bottom-socials{
     display: flex;
 }
 .footer-bottom-socials-icon {    
-    margin:0px 10px;
-    color:#E1EEEE;    
+    margin:0px 10px;     
 }
-.footer-bottom-socials-icon a {    
-    
+.footer-bottom-socials-icon a {   
     color:#E1EEEE;    
 }
 
+.footer-top-upButton {
+    background-color:#777777;
+    padding:15px 0px;
+    font-size:20px;
+    display:none;
+}
+.footer-top-upButton a{
+    text-decoration: none;
+    color:#23B4CA;
+}
+
+@media all and (max-width:1300px) {
+    .footer-top-wrapper {
+        padding: 20px 20px;
+    }
+    .footer-bottom-wrapper {
+        padding: 20px 30px;
+    }  
+   
+}
+@media all and (max-width:1100px) {
+    .footer-top-contact-text, .footer-top-account-text, .footer-top-information-text, .footer-top-buy-text {
+        font-size: 20px;      
+    }
+    .footer-top-socials-wrapper {
+        display:block;
+    }
+    .footer-bottom-socials {
+        display:none;
+    }
+    .footer-bottom {
+        flex-direction: column;
+    }
+    .footer-bottom-info, .footer-bottom-input {
+        width:100%;
+        text-align: center;      
+    }
+    .footer-bottom-input form {
+        text-align: center;
+        margin: 0px;
+        padding:15px 0px 0px 0px;       
+    }
+}
+@media all and (max-width:900px) {
+    .footer-top {   
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;      
+    }
+   
+    .footer-top-payment {
+        display:none;
+    }
+    
+    .footer-top-child {
+        max-width:100%;
+        margin-bottom:10px;      
+    }
+    .footer-top-child li{
+        display:inline-block;   
+        margin:0px 15px;
+    }
+    .footer-top-child li:hover{
+        text-decoration: underline;        
+    }
+
+    .footer-top-contact-text-details {
+        display:none;
+    }
+    .footer-top-contact-text, .footer-top-account-text, .footer-top-information-text, .footer-top-buy-text {
+        width:99%;      
+    }  
+
+}
+@media all and (max-width:740px) {
+    .none {
+        display:none;
+    }
+    .footer-top-upButton {
+        display:block;
+    }
+    
+}

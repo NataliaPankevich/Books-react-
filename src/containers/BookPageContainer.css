@@ -1,3 +1,4 @@
+
 .book-page-wrapper {
     padding: 15px 0px;
 }
@@ -31,6 +32,7 @@
 
 .book-description-text{
     text-align: justify;
+    padding:20px 5px;
 }
 
 .book-price p{
@@ -39,3 +41,55 @@
     margin: 15px 0px;
 }
 
+
+
+
+/* Стиль вкладок */
+.book-page-tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding:5px;
+  }
+  
+  /* Стиль кнопок внутри вкладок */
+  .book-page-tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    margin:0px;
+  }
+  
+  /* Изменение цвета фона кнопок при наведении курсора мыши */
+  .book-page-tab button:hover {
+    background-color: #ddd;
+ }
+
+
+
+.book-description-reviews {
+  display:flex;
+  padding:10px 0px;
+ 
+}
+h2 {
+  margin:0px;  
+}
+
+.book-description-reviews-post {
+    text-align: left;
+}
+
+.book-description-reviews-form {
+  margin-right: 50px;
+  background-color: #EBEBEB;
+}
+
+.book-description-reviews-post-icon {
+  color:#23B4CA;
+}

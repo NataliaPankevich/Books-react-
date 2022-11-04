@@ -1,10 +1,14 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
+import { Input } from '../../input/Input';
 import { MenuItem } from './MenuItem';
 import { Button } from '../../buttons/Button';
 import { Authorization } from './authorization/Authorization';
 import {useState} from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faHeart, faComments} from '@fortawesome/free-regular-svg-icons';
+
 
 
 
@@ -15,7 +19,7 @@ export const Header = () => {
   return (
     <div>
       <div className="header-top-wrapper">
-        <div className="header-top container">
+        <div id="top" className="header-top container">
           <div className="header-top-info">
             <span> A1:+375 29 615 65 88</span>
             <span>МТС: +375 29 851 65 88 </span>
@@ -37,11 +41,11 @@ export const Header = () => {
         </div>
 
         <div className="header-search-input">
-          <input className="header-input" placeholder="Поиск"></input>
+          <Input style="search-input" type="text" placeholder="Поиск"/>
         </div>
 
         <div className="header-search-button">
-          <Button style="search-button" text={<img  className="search-button-img" src="./img/header-pictures/search_icon.png" alt=""/>} />
+          <Link to="page/searchResults" ><Button style="search-button" text={<img  className="search-button-img" src="./img/header-pictures/search_icon.png" alt=""/>} /></Link>
         </div>
 
         <div className="header-menu-item1">
@@ -72,8 +76,8 @@ export const Header = () => {
           <MenuItem src="./img/header-pictures/delivery_icon.png" name="Доставка"/>
         </div>
 
-        <div className="header-menu-like"><img src="./img/header-pictures/hearts.webp" alt=""/></div>
-        <div className="header-menu-question"><img src="./img/header-pictures/question.png" alt=""/></div>
+        <div className="header-menu-like"><FontAwesomeIcon icon={faHeart} size="2x"/></div>
+        <div className="header-menu-question"><FontAwesomeIcon icon={faComments} size="2x"/></div>
       </div>
     </div>
   );

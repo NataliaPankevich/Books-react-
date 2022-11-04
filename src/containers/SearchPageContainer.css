@@ -1,0 +1,29 @@
+.search-page-books {
+    display:flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding:15px 0px;
+}
+
+.search-page-title {
+    display:flex;   
+    background-color:#EBEBEB;   
+    height:40px;    
+    color: #23B4CA;
+    font-size: 25px;
+}
+.search-page-title p{
+    font-size: 25px;
+    margin:0px;
+    padding:0px 15px;
+}
+
+.search-page-title img{
+    background-color: #23B4CA;    
+    width:50px;
+    height:40px; 
+}
+
+
+
+
