@@ -8,7 +8,7 @@ export const BookItem=(props)=>{
     return (
         <div className="book-item-wrapper">
             <div className="book-item-img">
-                <Link to="page/:id" title={props.info.title} ><img src={props.info.image} alt=""/></Link>
+                <Link to="page/:id"  title={props.info.title} ><img src={props.info.image} alt=""/></Link>
             </div>
             <div className="book-item-descr">
                 <div className="book-item-descr-title"><Link to="page/:id"><h4>{props.info.title}</h4></Link></div>

@@ -1,0 +1,104 @@
+.authorization-page-title {
+    display:flex;   
+    background-color:#EBEBEB;   
+    height:40px;    
+    color: #23B4CA;
+    font-size: 25px;
+    border: 1px solid #ccc; 
+    margin-top: 20px;   
+}
+.authorization-page-title img{
+    background-color: #23B4CA;    
+    width:50px;
+    height:40px; 
+}
+.authorization-page-title p{
+    font-size: 24px;
+    margin:0px;
+    padding:0px 15px;  
+}
+.authorization-page {
+    display: flex;
+    color:#555555;
+    padding:0px 20px;
+}
+.authorization-page h3 {
+    text-align: left;
+    padding:5px 0px;
+    border-bottom:1px solid #ccc;
+}
+.authorization-page p{
+    text-align: justify;
+    font-size: 14px;
+}
+.authorization-page-new-users {
+    position:relative;
+    width:48%;
+    margin:40px 0px;
+    margin-right: 4%;   
+}
+.authorization-page-users form {
+    text-align: left;
+}
+.authorization-page-users {
+    width:48%;
+    margin:40px 0px; 
+    position:relative;   
+}
+.authorization-page-users p{
+    margin:20px 0px;    
+}
+.authorization-to-registration {
+    display:block;
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    width:40%;
+    border-radius: 5px;
+    padding:5px 10px;
+    background-color:#23B4CA;
+    color:#EBEBEB;
+    text-decoration: none;    
+}
+.authorization-page-users-btn {
+    position:absolute;
+    right:70px;
+    bottom:20px;    
+}
+
+@media all and (max-width:1060px) {
+    .authorization-page-title p{
+        font-size: 22px;        
+    }
+}
+
+@media all and (max-width:750px) {
+    .authorization-page {
+        display: flex;
+        flex-direction: column;
+    }
+    .authorization-page-new-users {       
+        width:98%;
+        margin:20px 0px;      
+    }
+    .authorization-to-registration {
+        position: static;       
+        width:40%;  
+        margin-top:30px;        
+    }
+    .authorization-page-users {
+        width:98%;
+        margin:20px 0px; 
+        position:relative;  
+    }
+    .authorization-page-users-btn {
+        position:static;
+        padding:0px;        
+    }
+}
+
+@media all and (max-width:580px) {
+    .authorization-page-title p{
+        font-size: 20px;        
+    }
+}

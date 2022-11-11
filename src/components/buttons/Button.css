@@ -13,11 +13,11 @@
 }
 
 .in-basket-button{  
-    border-radius: 2px;
+    border-radius: 5px;
     border:2px solid #23B4CA;
     color:#23B4CA;
     font-size:18px;
-    padding:12px 10px;
+    padding:10px 10px;
     margin:10px 0px;
 }
 
@@ -29,3 +29,24 @@
     background-color: #fff;
     margin:15px;
 }
+
+@media all and (max-width:1210px) {
+    .in-basket-button{  
+        font-size:16px;
+    }
+}
+@media all and (max-width:850px) {
+    .in-basket-button{  
+        font-size:14px;
+        padding:8px 5px;
+        margin:5px 0px;
+    }
+} 
+
+@media all and (max-width:660px) {
+    .in-basket-button{  
+        font-size:12px;
+        padding:6px 5px;
+        margin:5px 0px;
+    }
+}   

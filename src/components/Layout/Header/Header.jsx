@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { Input } from '../../input/Input';
 import { MenuItem } from './MenuItem';
 import { Button } from '../../buttons/Button';
-import { Authorization } from './authorization/Authorization';
-import {useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faHeart, faComments} from '@fortawesome/free-regular-svg-icons';
 
@@ -14,7 +12,7 @@ import {faHeart, faComments} from '@fortawesome/free-regular-svg-icons';
 
 export const Header = () => {
 
-    const[hidden, setHidden]=useState(true);   
+     
 
   return (
     <div>
@@ -27,8 +25,8 @@ export const Header = () => {
           </div>
 
           <div className="header-top-buttons">
-            <div className="header-top-authorization-btn"><Link  onClick={()=>setHidden(!hidden)} to=""><img  src="./img/header-pictures/login.png" alt=""/></Link></div>
-            {hidden ?  null : <Authorization/>}
+            <div className="header-top-authorization-btn"><Link  to="page/authorization"><img  src="./img/header-pictures/login.png" alt=""/></Link></div>
+            
             <div className="header-top-basket-btn"><Link to=""><img  src="./img/header-pictures/topcart_icon.png" alt=""/></Link></div>
             <div className="header-top-order-btn"><Link to=""><img  src="./img/header-pictures/checkout.png" alt=""/></Link></div>            
           </div>

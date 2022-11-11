@@ -1,8 +1,7 @@
-
 .book-item-wrapper {     
     width:23%;
     margin:0.8%;
-    border:1px solid #2B2B2B;
+    border: 1px solid #ccc;
 }
 .book-item-img img{
     width:100%;
@@ -11,22 +10,37 @@
    padding:0px;
    margin:0px;
 }
-
 .book-item-descr {
     background-color: #F1F1F1;
     border-radius: 5px;    
 }
-
 .book-item-descr-title {
-    min-height: 60px;    
+    min-height: 70px;    
 }
-
 .book-item-descr-title a{
     text-decoration: none;  
     color:#2B2B2B;  
 }
-
 .book-item-descr-price {
     font-weight: bold;
     font-size: 20px;
+}
+
+@media all and (max-width:900px) {
+    .book-item-wrapper {     
+        width:30%;
+        margin:1.5%;        
+    }
+}
+@media all and (max-width:750px) {
+    .book-item-descr-title {
+        min-height: 80px;
+        font-size:14px;    
+    }
+}
+@media all and (max-width:660px) {
+    .book-item-wrapper {     
+        width:29%;
+        margin:1.5%;        
+    }
 }

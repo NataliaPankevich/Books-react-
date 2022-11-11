@@ -7,7 +7,7 @@ import { Slider } from "../components/slider/Slider";
 import { Button } from "../components/buttons/Button";
 
 //Это менеджер(умная) компонента. Она получает данные и передает внутрь всем компонентам в виде пропсов.
-export const HomeContainer = () => {
+export const HomeContainer = (props) => {
   const [booksList, setBooksList] = useState([]);
   const refContainer = useRef(null);
 
@@ -91,7 +91,7 @@ export const HomeContainer = () => {
 
         <div className="home-page-books">
           {booksList.map((item) => (
-            <BookItem info={item} />
+            <BookItem info={item}/>
           ))}
         </div>
       </div>

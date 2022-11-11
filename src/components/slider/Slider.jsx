@@ -26,7 +26,7 @@ export const Slider = () => {
         // Возвращаем индекс
         return res;
       });
-    }, 10000);
+    }, 7000);
     // Выключаем интервал
     return () => clearInterval(interval);
   }, []);

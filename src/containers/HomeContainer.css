@@ -1,24 +1,22 @@
-
 .home-page-books {
     display:flex;
    flex-direction: row;
    flex-wrap: wrap;
    padding:15px 0px;
 }
-
 .home-page-books-title {
     display:flex;   
     background-color:#EBEBEB;   
     height:40px;    
     color: #23B4CA;
     font-size: 25px;
+    border: 1px solid #ccc;
 }
 .home-page-books-title p{
-    font-size: 25px;
+    font-size: 24px;
     margin:0px;
-    padding:0px 15px;
+    padding:0px 15px;    
 }
-
 .home-page-books-title img{
     background-color: #23B4CA;    
     width:50px;
@@ -36,12 +34,22 @@
     height:100%;    
 }
 .home-page-slider {   
-    margin:15px 0px;
-    border:1px solid black;
+    margin:15px 0px;   
 }
 @media all and (max-width:1250px) {
     .home-page-wrapper {
         padding:0px 15px;
     }
    
+}
+
+@media all and (max-width:1060px) {
+    .home-page-books-title p{
+        font-size: 22px;
+    }
+}
+@media all and (max-width:580px) {
+    .home-page-books-title p{
+        font-size: 20px;
+    }
 }

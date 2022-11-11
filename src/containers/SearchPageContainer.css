@@ -11,6 +11,7 @@
     height:40px;    
     color: #23B4CA;
     font-size: 25px;
+    border: 1px solid #ccc;
 }
 .search-page-title p{
     font-size: 25px;
@@ -24,6 +25,10 @@
     height:40px; 
 }
 
-
+@media all and (max-width:960px) {
+    .search-page-title p{
+        font-size: 22px;      
+    }
+}
 
 

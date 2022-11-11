@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { Button } from "../components/buttons/Button";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare} from "@fortawesome/free-regular-svg-icons";
-
+import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
+import { Input } from "../components/input/Input";
 
 //Это менеджер(умная) компонента. Она получает данные и передает внутрь всем компонентам в виде пропсов.
 export const BookPageContainer = (props) => {
@@ -60,7 +60,6 @@ export const BookPageContainer = (props) => {
     return initialValue || [];
   });
 
-
   const [name, setName] = useState(() => {
     // getting stored value
     const saved = localStorage.getItem("name");
@@ -86,10 +85,15 @@ export const BookPageContainer = (props) => {
 
   return (
     <div className="book-page-wrapper container">
-      <div className="book-page-pagination">
-         
-
-
+      <div className="book-page-breadcrumbs-wrapper">
+        <ul className="book-page-breadcrumbs">
+          <li>
+            <Link to="/">Главная</Link>
+          </li>
+          <li>
+            <span>{bookInfo.title}</span>
+          </li>         
+        </ul>
       </div>
 
       <div className="book-description">
@@ -98,9 +102,9 @@ export const BookPageContainer = (props) => {
         </div>
 
         <div className="book-description-info">
-          <h2>{bookInfo.title}</h2>
-          <h3>{bookInfo.subtitle}</h3>
-          <p>Автор(-ы): {bookInfo.authors}</p>
+          <h2 className="book-description-color-text">{bookInfo.title}</h2>
+          <h3 className="book-description-color-text">{bookInfo.subtitle}</h3>
+          <p >Автор(-ы): <span className="book-description-color-text">{bookInfo.authors}</span></p>
           <p>По году издания: {bookInfo.year}</p>
           <p>Тип обложки:</p>
           <p>Издательство: {bookInfo.publisher}</p>
@@ -179,7 +183,7 @@ export const BookPageContainer = (props) => {
                   </label>
                 </div>
 
-                <input type="submit" value="Отправить" />
+                <Input style="send-review-input" type="submit" value="Отправить" />
               </form>
             </div>
 
@@ -192,7 +196,11 @@ export const BookPageContainer = (props) => {
                   >
                     <p>
                       <h3>
-                        <FontAwesomeIcon className="book-description-reviews-post-icon" icon={faPenToSquare} /> Отзыв пользователя: <i>{item.userName}</i>
+                        <FontAwesomeIcon
+                          className="book-description-reviews-post-icon"
+                          icon={faPenToSquare}
+                        />{" "}
+                        Отзыв пользователя: <i>{item.userName}</i>
                       </h3>
                     </p>
                     <p>{item.review}</p>

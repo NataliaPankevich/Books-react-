@@ -10,9 +10,13 @@ export const Input=(props)=>{
         styles="subscribe-input";
     }else if(props.style === "email-input"){
         styles="email-input";
+    }else if(props.style === "authorization-input"){
+        styles="authorization-input";
+    }else if(props.style === "send-review-input"){
+        styles="send-review-input";
+    }else if(props.style === "registration-input"){
+        styles="registration-input";
     }
-
-
 
 
     return (

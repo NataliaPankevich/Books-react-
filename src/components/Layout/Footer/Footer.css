@@ -6,10 +6,12 @@
 .footer-top-wrapper {
     background-color: #EBEBEB;
     padding:20px 0px;
+    border: 1px solid #ccc; 
 }
 .footer-bottom-wrapper {
     background-color: #2F2F2F; 
-    padding:20px 0px 0px 0px;   
+    padding:20px 0px 20px 0px;
+      
 }
 
 .footer-bottom {
@@ -132,6 +134,7 @@
 .footer-bottom-input input{
     width:50%;
     height:30px;
+    margin-top:10px;
     margin-bottom: 10px;
 }
 .footer-bottom-socials{
@@ -152,7 +155,7 @@
 }
 .footer-top-upButton a{
     text-decoration: none;
-    color:#23B4CA;
+    color:#23B4CA;   
 }
 
 @media all and (max-width:1300px) {

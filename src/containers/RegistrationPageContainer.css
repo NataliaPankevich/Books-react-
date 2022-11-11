@@ -1,0 +1,37 @@
+.registration-page-title {
+    display:flex;   
+    background-color:#EBEBEB;   
+    height:40px;    
+    color: #23B4CA;
+    font-size: 25px;
+    border: 1px solid #ccc; 
+    margin-top: 20px;   
+}
+.registration-page-title img{
+    background-color: #23B4CA;    
+    width:50px;
+    height:40px; 
+}
+.registration-page-title p{
+    font-size: 24px;
+    margin:0px;
+    padding:0px 15px;  
+}
+.registration-page-form {
+    padding:20px 20px;
+    text-align: left;
+    color:#555;  
+}     
+.registration-page-policy{
+    font-size: 14px;
+}          
+.registration-page-link {
+    
+    color:#23B4CA;
+    text-decoration: none;
+}
+.registration-page-link:hover {
+    text-decoration: underline;
+}
+  
+  
