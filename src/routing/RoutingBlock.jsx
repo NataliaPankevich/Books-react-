@@ -1,5 +1,5 @@
 import React from 'react';
-import {Routes, Route, Link} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import {AuthorizationPage} from '../pages/AuthorizationPage/Authorization';
 import {RegistrationPage} from '../pages/RegistrationPage/Registration';
 import {HomePage} from '../pages/HomePage/HomePage';
@@ -12,9 +12,9 @@ export const RoutingBlock=()=>{
         <div>    
     
           <Routes>
-            <Route path="/" element={<Layout/>}>
+            <Route path="/" element={<Layout />}>
               <Route index element={<HomePage />}/>
-              <Route path="page/:id" element={<BookPage />}/>
+              <Route path="page/bookpage" element={<BookPage />}/>
               <Route path="page/searchResults" element={<Search/>}/>              
               <Route path="page/authorization" element={<AuthorizationPage />}/>
               <Route path="page/authorization/page/registration" element={<RegistrationPage/>}/>

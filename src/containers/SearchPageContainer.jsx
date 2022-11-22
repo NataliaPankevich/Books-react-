@@ -1,22 +1,47 @@
 import React from "react";
 import "./SearchPageContainer.css";
-import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useContext} from "react";
 import { BookItem } from "../components/bookItem/BookItem";
-import { Button } from "../components/buttons/Button"; //{booksList.map((item)=><BookItem info={item}/>)}
+import { Context2} from "../components/context/Context";
+
 
 export const SearchPageContainer = (props) => {
+  
+  const [inputValue, setInputValue] = useContext(Context2);
 
     const [booksList, setBooksList] = useState([]);
 
+     
+
     useEffect(() => {
-        const url = "https://api.itbook.store/1.0/search/mongodb";
+       let url = new URL(`https://api.itbook.store/1.0/search/${inputValue}`);
         fetch(url)
-          .then((response) => response.json())
-          .then((text) => {
-            setBooksList([...text.books]);
-          });
-      }, []);
+        .then((res) => {
+          if (res.status >= 200 && res.status < 300) {
+            return res;
+          } else {
+            let error = new Error(res.statusText);
+            error.response = res;
+            throw error
+          }
+        })
+        /*.then((res) => {
+          if (res.headers['content-type'] !== 'application/json') {
+            let error = new Error('Некорректный ответ от сервера');
+            error.response = res;
+            throw error
+          }
+          return res;
+        })*/
+        .then((res) => res.json())
+        .then((text) => {
+          setBooksList([...text.books]);
+        })
+        .catch((e) => {
+          console.log('Error: ' + e.message);
+          console.log(e.response);
+        });
+      }, [inputValue]);
 
 
 
@@ -29,13 +54,13 @@ export const SearchPageContainer = (props) => {
             <img src="../img/home-page-pictures/bg_featured.png" alt="" />
           </div>
           <div>
-            <p>Результаты поиска для '{}'</p>
+            <p>Результаты поиска для "{inputValue}":</p>
           </div>
         </div>
 
         <div className="search-page-books">
         {booksList.map((item) => (
-            <BookItem info={item} />
+            <BookItem key={item.isbn13} info={item} />
           ))}
         </div>
       </div>

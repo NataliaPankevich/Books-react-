@@ -21,14 +21,21 @@
     padding:20px 20px;
     text-align: left;
     color:#555;  
-}     
+} 
+  
 .registration-page-policy{
     font-size: 14px;
 }          
-.registration-page-link {
-    
+.registration-page-link {    
     color:#23B4CA;
     text-decoration: none;
+}
+.registration-page-return-link {
+    display:block;
+    text-align: left;
+    color:#23B4CA;
+    text-decoration: none;
+    margin:10px 0px;
 }
 .registration-page-link:hover {
     text-decoration: underline;

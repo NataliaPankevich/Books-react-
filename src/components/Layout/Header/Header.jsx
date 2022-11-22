@@ -6,14 +6,18 @@ import { MenuItem } from './MenuItem';
 import { Button } from '../../buttons/Button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faHeart, faComments} from '@fortawesome/free-regular-svg-icons';
-
-
+import {useContext} from "react";
+import { Context2} from "../../context/Context";
 
 
 export const Header = () => {
 
-     
+  const [inputValue, setInputValue] = useContext(Context2);
 
+  const onInputChange=(event)=>{    
+    setInputValue(event.target.value)      
+  }
+ 
   return (
     <div>
       <div className="header-top-wrapper">
@@ -39,11 +43,11 @@ export const Header = () => {
         </div>
 
         <div className="header-search-input">
-          <Input style="search-input" type="text" placeholder="Поиск"/>
+          <Input  value={inputValue} onChange={onInputChange} style={"search-input"} type="text" placeholder="Поиск"/>
         </div>
 
-        <div className="header-search-button">
-          <Link to="page/searchResults" ><Button style="search-button" text={<img  className="search-button-img" src="./img/header-pictures/search_icon.png" alt=""/>} /></Link>
+        <div className="header-search-button">             
+          <Link  to="page/searchResults" ><Button style={"search-button"} text={<img  className="search-button-img" src="./img/header-pictures/search_icon.png" alt=""/>} /></Link>
         </div>
 
         <div className="header-menu-item1">

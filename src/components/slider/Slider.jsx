@@ -5,11 +5,11 @@ import React, { useEffect, useState} from "react";
 export const Slider = () => {
 
   const img = [
-    <img key="./img/slider-pictures/slide1.jpg" src="./img/slider-pictures/slide1.jpg" />,
-    <img key="./img/slider-pictures/slide2.jpg" src="./img/slider-pictures/slide2.jpg" />,
-    <img key="./img/slider-pictures/slide3.jpg" src="./img/slider-pictures/slide3.jpg" />,
-    <img key="./img/slider-pictures/slide4.jpg" src="./img/slider-pictures/slide4.jpg" />,
-    <img key="./img/slider-pictures/slide5.jpg" src="./img/slider-pictures/slide5.jpg" />,
+    <img alt="" key="./img/slider-pictures/slide1.jpg" src="./img/slider-pictures/slide1.jpg" />,
+    <img alt="" key="./img/slider-pictures/slide2.jpg" src="./img/slider-pictures/slide2.jpg" />,
+    <img alt="" key="./img/slider-pictures/slide3.jpg" src="./img/slider-pictures/slide3.jpg" />,
+    <img alt="" key="./img/slider-pictures/slide4.jpg" src="./img/slider-pictures/slide4.jpg" />,
+    <img alt="" key="./img/slider-pictures/slide5.jpg" src="./img/slider-pictures/slide5.jpg" />,
   ];
 
   // Индекс текущего слайда

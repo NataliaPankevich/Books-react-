@@ -1,14 +1,15 @@
 import React from "react";
 import "./HomeContainer.css";
-import { Link } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import {useContext, useRef } from "react";
 import { BookItem } from "../components/bookItem/BookItem";
 import { Slider } from "../components/slider/Slider";
 import { Button } from "../components/buttons/Button";
+import { Context } from "../components/context/Context";
 
-//Это менеджер(умная) компонента. Она получает данные и передает внутрь всем компонентам в виде пропсов.
-export const HomeContainer = (props) => {
-  const [booksList, setBooksList] = useState([]);
+
+
+export const HomeContainer = () => {
+ 
   const refContainer = useRef(null);
 
   const showText = () => {
@@ -17,16 +18,9 @@ export const HomeContainer = (props) => {
     } else if (refContainer.current.className === "home-page-text-open") {
       refContainer.current.className = "home-page-text-close";
     }
-  };
+  };  
 
-  useEffect(() => {
-    const url = "https://api.itbook.store/1.0/new";
-    fetch(url)
-      .then((response) => response.json())
-      .then((text) => {
-        setBooksList([...text.books]);
-      });
-  }, []);
+  const [booksList, setBooksList] = useContext(Context);
 
   return (
     <div className="home-page-wrapper container">
@@ -91,7 +85,7 @@ export const HomeContainer = (props) => {
 
         <div className="home-page-books">
           {booksList.map((item) => (
-            <BookItem info={item}/>
+            <BookItem key={item.isbn13} info={item}/>
           ))}
         </div>
       </div>

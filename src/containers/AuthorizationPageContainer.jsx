@@ -1,7 +1,6 @@
 import "./AuthorizationPageContainer.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "../components/buttons/Button";
 import {useState} from 'react';
 import validator from 'validator';
 import { Input } from "../components/input/Input";

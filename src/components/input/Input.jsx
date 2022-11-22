@@ -21,7 +21,7 @@ export const Input=(props)=>{
 
     return (
         <div>
-            <input className={styles} type={props.type} placeholder={props.placeholder} value={props.value}/>
+            <input className={styles} onChange={props.onChange} type={props.type} placeholder={props.placeholder}/>
         </div>
     );
 

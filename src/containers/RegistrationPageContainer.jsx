@@ -1,7 +1,6 @@
 import "./RegistrationPageContainer.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "../components/buttons/Button";
 import {useState} from 'react';
 import validator from 'validator';
 import { Input } from "../components/input/Input";
@@ -57,7 +56,7 @@ export const RegistrationPageContainer =()=>{
     }
 
      
-
+   
     return (
      
             <div  className="registration-page container">
@@ -95,9 +94,9 @@ export const RegistrationPageContainer =()=>{
                     <div><Input style="send-review-input" type="submit" /></div>
                 </form>
                 </div>
-                <div><p className="registration-page-policy">Продолжая, Вы соглашаетесь и принимаете условия <a className="registration-page-link" href="">Политики по персональным данным</a></p></div>
+                <div><p className="registration-page-policy">Продолжая, Вы соглашаетесь и принимаете условия <a className="registration-page-link" href="#">Политики по персональным данным</a></p></div>
                
-                <Link to="page/authorization"></Link>
+                <Link className="registration-page-return-link" to="/page/authorization">...вернуться </Link>
             </div>       
 
         

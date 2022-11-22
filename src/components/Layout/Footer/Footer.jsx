@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { Button } from "../../buttons/Button";
 import { List } from "../../list/List";
 import { Input } from '../../input/Input';
 import validator from "validator";
@@ -77,22 +76,22 @@ export const Footer = () => {
         <p><b>Следите за акциями и новостями</b></p>
           <div className="footer-top-socials">
              <div className="footer-top-socials-icon">
-              <a href="https://www.facebook.com/" target="_blank">
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faFacebook} size="3x" />
               </a>
             </div>
             <div className="footer-top-socials-icon">
-              <a href="https://twitter.com/" target="_blank">
+              <a href="https://twitter.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faTwitter} size="3x" />
               </a>
             </div>
             <div className="footer-top-socials-icon">
-              <a href="https://www.instagram.com/" target="_blank">
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faInstagram} size="3x" />
               </a>
             </div>
             <div className="footer-top-socials-icon">
-              <a href="https://vk.com/" target="_blank">
+              <a href="https://vk.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faVk} size="3x" />
               </a>
             </div>
@@ -199,22 +198,22 @@ export const Footer = () => {
 
           <div className="footer-bottom-socials">
             <div className="footer-bottom-socials-icon">
-              <a href="https://www.facebook.com/" target="_blank">
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faFacebook} size="3x" />
               </a>
             </div>
             <div className="footer-bottom-socials-icon">
-              <a href="https://twitter.com/" target="_blank">
+              <a href="https://twitter.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faTwitter} size="3x" />
               </a>
             </div>
             <div className="footer-bottom-socials-icon">
-              <a href="https://www.instagram.com/" target="_blank">
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faInstagram} size="3x" />
               </a>
             </div>
             <div className="footer-bottom-socials-icon">
-              <a href="https://vk.com/" target="_blank">
+              <a href="https://vk.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faVk} size="3x" />
               </a>
             </div>
