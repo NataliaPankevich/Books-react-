@@ -16,13 +16,18 @@ import { Context3} from "./components/context/Context";
 function App() {
   const [booksList, setBooksList] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [isbn13, setIsbn13] = useState("");
+  const [isbn13, setIsbn13] = useState(()=>{
+    let saved = localStorage.getItem("bookIsbn");
+    return  saved || ""
+  });
+  
+  
 
  
   useEffect(() => {
-    const url = "https://api.itbook.store/1.0/new";
-    fetch(url)
-      /*.then((res) => {
+    
+    fetch("https://api.itbook.store/1.0/new")
+      .then((res) => {
         if (res.status >= 200 && res.status < 300) {
           return res;
         } else {
@@ -43,10 +48,10 @@ function App() {
       .then((text) => {
         setBooksList([...text.books]);
       })
-      /*.catch((e) => {
+      .catch((e) => {
         console.log('Error: ' + e.message);
         console.log(e.response);
-      })*/;
+      });
 
   }, []);
     

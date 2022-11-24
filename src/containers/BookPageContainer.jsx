@@ -10,7 +10,14 @@ import { Context3 } from "../components/context/Context";
 import validator from "validator";
 
 export const BookPageContainer = () => {
-  const [isbn13, setIsbn13] = useContext(Context3);
+ 
+
+  const [isbn13, setIsbn13] =  useContext(Context3); 
+
+  
+  useEffect(() => {
+    localStorage.setItem("bookIsbn", isbn13);
+  }, []);
 
   const [hiddenDescription, setHiddenDescription] = useState(true);
   const [hiddenReviews, setHiddenReviews] = useState(false);
@@ -36,21 +43,20 @@ export const BookPageContainer = () => {
 
   const [list, setList] = useState(() => {
     // getting stored value
-    let saved = localStorage.getItem(bookInfo.isbn13);
+    let saved = localStorage.getItem(isbn13);
     let initialValue = JSON.parse(saved);
     return initialValue || [];
   });
 
   useEffect(() => {
-    const url = "https://api.itbook.store/1.0/books/9781617294136";
-    fetch(url)
-      /*.then((res) => {
+    fetch(`https://api.itbook.store/1.0/books/${isbn13}`)
+      .then((res) => {
         if (res.status >= 200 && res.status < 300) {
           return res;
         } else {
           let error = new Error(res.statusText);
           error.response = res;
-          throw error
+          throw error;
         }
       })
       /*.then((res) => {
@@ -78,12 +84,16 @@ export const BookPageContainer = () => {
           price: text.price,
           desc: text.desc,
         })
-      );
+      )
+      .catch((e) => {
+        console.log("Error: " + e.message);
+        console.log(e.response);
+      });
   }, []);
 
   useEffect(() => {
-    // storing input name
-    localStorage.setItem(bookInfo.isbn13, JSON.stringify(list));
+    // storing
+    localStorage.setItem(isbn13, JSON.stringify(list));
   }, [list]);
 
   const add = (event) => {
@@ -180,40 +190,49 @@ export const BookPageContainer = () => {
             <div className="book-description-reviews-form">
               <form onSubmit={add}>
                 <h2>Напишите ваш отзыв</h2>
-                <div>
-                  <label>
-                    <h3>Псевдоним пользователя:</h3>
-                    <input
-                      value={userName}
-                      onChange={(event) => setUserName(event.target.value)}
-                    />
-                  </label>
+                <div className="book-description-reviews-form-wrap">
+                  <div>
+                    <div>
+                      <label>
+                        <h3>Псевдоним пользователя:</h3>
+                        <input
+                          value={userName}
+                          onChange={(event) => setUserName(event.target.value)}
+                        />
+                      </label>
+                    </div>
+
+                    <div>
+                      <label>
+                        <h3>Дата(год/месяц/день):</h3>
+                        <input
+                          value={reviewDate}
+                          onChange={(event) =>
+                            setReviewDate(event.target.value)
+                          }
+                        />
+                      </label>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label>
+                      <h3>Отзыв:</h3>
+                      <textarea
+                        value={review}
+                        onChange={(event) => setReview(event.target.value)}
+                      />
+                    </label>
+                  </div>
                 </div>
 
-                <div>
-                  <label>
-                    <h3>Дата(год/месяц/день):</h3>
-                    <input
-                      value={reviewDate}
-                      onChange={(event) => setReviewDate(event.target.value)}
-                    />
-                  </label>
+                <div className="book-description-reviews-btn">
+                  <Input
+                    style="send-review-input"
+                    type="submit"
+                    value="Отправить"
+                  />
                 </div>
-                <div>
-                  <label>
-                    <h3>Отзыв:</h3>
-                    <textarea
-                      value={review}
-                      onChange={(event) => setReview(event.target.value)}
-                    />
-                  </label>
-                </div>
-
-                <Input
-                  style="send-review-input"
-                  type="submit"
-                  value="Отправить"
-                />
               </form>
             </div>
 

@@ -44,3 +44,9 @@
         margin:1.5%;        
     }
 }
+@media all and (max-width:500px) {
+    .book-item-wrapper {     
+        width:43%;
+        margin:3%;        
+    }
+}

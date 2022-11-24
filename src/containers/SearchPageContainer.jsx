@@ -14,8 +14,8 @@ export const SearchPageContainer = (props) => {
      
 
     useEffect(() => {
-       let url = new URL(`https://api.itbook.store/1.0/search/${inputValue}`);
-        fetch(url)
+             
+        fetch(`https://api.itbook.store/1.0/search/${inputValue}`)
         .then((res) => {
           if (res.status >= 200 && res.status < 300) {
             return res;

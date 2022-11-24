@@ -11,6 +11,9 @@
     color:#EBEBEB;
     font-size: 18px;
 }
+.subscribe-button:hover{
+    background-color:#EBEBEB;   
+}
 
 .in-basket-button{  
     border-radius: 5px;
@@ -19,6 +22,10 @@
     font-size:18px;
     padding:10px 10px;
     margin:10px 0px;
+}
+.in-basket-button:hover{  
+    background-color:#23B4CA;
+    color:#EBEBEB; 
 }
 
 .home-page-text-btn {    

@@ -1,20 +1,19 @@
-
 .book-page-wrapper {
-    padding: 15px 0px;    
+  padding: 15px 0px;
 }
 
 .book-page-breadcrumbs-wrapper {
-    padding:7px 0px;
-    background-color: #EBEBEB;    
-    text-align:left;
-    border: 1px solid #ccc;
+  padding: 7px 0px;
+  background-color: #EBEBEB;
+  text-align: left;
+  border: 1px solid #ccc;
 }
 
 
 /* Стиль списка */
-ul.book-page-breadcrumbs {  
-  list-style: none; 
-  margin:0px; 
+ul.book-page-breadcrumbs {
+  list-style: none;
+  margin: 0px;
 }
 
 /* Отображение элементов списка бок о бок */
@@ -43,103 +42,132 @@ ul.book-page-breadcrumbs li a:hover {
 }
 
 .book-description-color-text {
-    color:#23B4CA;
+  color: #23B4CA;
 }
+
 .book-description {
-    display:flex;
-    margin:20px 0px;   
+  display: flex;
+  margin: 20px 0px;
 }
+
 .book-description-img {
-    width:35%;
-    background-color: #EBEBEB;    
-    border: 1px solid #ccc;    
+  width: 35%;
+  background-color: #EBEBEB;
+  border: 1px solid #ccc;
 }
-.book-description-img img{
-  width:100%;   
+
+.book-description-img img {
+  width: 100%;
 }
+
 .book-description-info {
-    margin:0px 0px 0px 40px;
-    text-align:left;    
+  margin: 0px 0px 0px 40px;
+  text-align: left;
 }
-.book-description-info p{
-    margin:0px;    
-    font-size: 16px;
-    line-height:20px;
+
+.book-description-info p {
+  margin: 0px;
+  font-size: 16px;
+  line-height: 20px;
 }
-.book-description-text{
-    text-align: justify;
-    padding:20px 5px;
+
+.book-description-text {
+  text-align: justify;
+  padding: 20px 5px;
 }
+
 .book-price {
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
-.book-price p{
-    font-size: 25px;
-    font-weight: bold;   
+.book-price p {
+  font-size: 25px;
+  font-weight: bold;
 }
+
 /* Стиль вкладок */
 .book-page-tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;   
-  }
-  
-  /* Стиль кнопок внутри вкладок */
-  .book-page-tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    margin:0px;
-  }
-  
-  /* Изменение цвета фона кнопок при наведении курсора мыши */
-  .book-page-tab button:hover {
-    background-color: #ddd;
- }
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Стиль кнопок внутри вкладок */
+.book-page-tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  margin: 0px;
+}
+
+/* Изменение цвета фона кнопок при наведении курсора мыши */
+.book-page-tab button:hover {
+  background-color: #ddd;
+}
 
 .book-description-reviews {
-    padding:10px 0px; 
+  padding: 10px 0px;
+  color: #555555;
 }
-h2, h3 {
-  margin:2px;  
+
+h2,
+h3 {
+  margin: 2px;
+  font-weight: 600;
+  text-align: center;
 }
+
 h3 {
   margin-bottom: 20px;
+  font-weight: 400;
+  text-align: left;
 }
+
+.book-description-reviews-form-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .book-description-reviews-post {
-    text-align: left;
+  text-align: left;
+  margin-top: 10px;
 }
-.book-description-reviews-form {  
-  width:60%;
-  margin:0 auto;
-  padding:20px;  
-  background-color: #EBEBEB; 
+
+.book-description-reviews-form {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #EBEBEB;
   border: 1px solid #ccc;
 }
 
-.book-description-reviews-form form{  
-  text-align:left;  
+.book-description-reviews-form form {
+  text-align: left;
 }
 
-.book-description-reviews-form h2, .book-description-reviews-form h3{
- margin:5px; 
+.book-description-reviews-form h2,
+.book-description-reviews-form h3 {
+  margin: 5px;
 }
 
 .book-description-reviews-post-icon {
-  color:#23B4CA;
+  color: #23B4CA;
 }
 
+.book-description-reviews-btn {
+  text-align: center;
+}
 
 @media all and (max-width:1250px) {
-  .book-page-wrapper  {
-      padding:0px 15px;
+  .book-page-wrapper {
+    padding: 0px 15px;
   }
 }
 
@@ -149,44 +177,67 @@ h3 {
     margin-bottom: 10px;
   }
 }
-@media all and (max-width:750px) {
-  .book-description {
-    display:flex;
-    flex-direction: column;
-    margin:20px 0px;   
-}
-  .book-description-img {
-    width:70%;
-    margin: 0 auto;
-    background-color: #EBEBEB;    
-    border: 1px solid #ccc;
-   
-  } 
-  .book-description-info {
-    margin:0px 0px 0px 20px;
-    text-align:left;    
-}
+
+@media all and (max-width:870px) {
   .book-description-reviews-form {
-  margin-right: 30px;  
-  background-color: #EBEBEB;
-} 
-.book-description-reviews-form form{
-  padding:20px 20px 20px 20px;   
-} 
-}
-@media all and (max-width:700px) {
-  .book-description-reviews h3{
-    font-size:12px;
-  }
-  .book-description-reviews h2{
-    font-size:14px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 12px;
   }
 }
 
-@media all and (max-width:500px) {
-  .book-description-reviews {
-    display:flex;
+@media all and (max-width:750px) {
+  .book-description {
+    display: flex;
     flex-direction: column;
-    padding:10px 0px; 
+    margin: 20px 0px;
+  }
+
+  .book-description-img {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #EBEBEB;
+    border: 1px solid #ccc;
+  }
+
+  .book-description-info {
+    margin: 0px 0px 0px 20px;
+    text-align: left;
+  }
+
+  .book-description-reviews-form {
+    padding: 5px;
+    width: 80%;
+    margin-right: 0 auto;
+    background-color: #EBEBEB;
+  }
+
+  .book-description-reviews-form form {
+    padding: 10px 20px 10px 20px;
+  }
+}
+
+@media all and (max-width:700px) {
+  .book-description-reviews h3 {
+    font-size: 12px;
+  }
+
+  .book-description-reviews h2 {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width:560px) {
+  .book-description-reviews-form {
+    width: 90%;
+    margin-right: 0 auto;
+  }
+}
+
+@media all and (max-width:470px) {
+
+  .book-description-reviews-form-wrap {
+    display: block;
+    padding: 10px 0px;
   }
 }
